@@ -46,4 +46,14 @@ view: products {
     type: count
     drill_fields: [id, item_name, inventory_items.count]
   }
+
+  dimension: case_eg {
+      case: {
+        when: {
+          sql:{rank} = 1;;
+          label: "Number 1"
+        }
+        else: "Not Number 1"
+      }
+  }
 }
