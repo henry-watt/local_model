@@ -56,4 +56,41 @@ view: products {
         else: "Not Number 1"
       }
   }
+
+  dimension: tier_eg {
+    type:  tier
+    tiers: [0, 10, 20, 30, 40, 50, 60, 70, 80]
+    style: classic
+    sql:  ${TABLE}.rank;;
+  }
+
+  dimension: cheap_or_nat {
+    type:  yesno
+    sql: ${retail_price} < 20;;
+  }
+
+  measure: min_eg {
+    type: min
+    sql: ${retail_price} ;;
+  }
+
+  measure: average_example {
+    type: average
+    sql: ${retail_price};;
+  }
+
+  measure: sum_eg {
+    type: sum
+    sql: ${retail_price} ;;
+  }
+
+  measure: number_eg {
+    type: number
+    sql: ${retail_price} - ${retail_price} ;;
+  }
+
+  measure: median_retail {
+    type: median
+    sql:${retail_price} ;;
+  }
 }
