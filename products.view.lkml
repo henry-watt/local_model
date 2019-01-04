@@ -74,10 +74,11 @@ view: products {
     sql: ${retail_price} ;;
   }
 
-  measure: average_example {
+  measure: average_price {
     type: average
     sql: ${retail_price};;
     drill_fields: [retail_price]
+    value_format_name: usd
    }
 
   measure: sum_eg {
@@ -105,4 +106,5 @@ view: products {
       value: ">100"
     }
   }
+
 }
