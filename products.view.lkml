@@ -95,4 +95,14 @@ view: products {
     sql: ${retail_price}
     value_format_name: usd;;
   }
+
+  measure: avg_expensive_price {
+    type: average
+    sql:${retail_price};;
+    value_format_name: usd
+    filters:{
+      field: retail_price
+      value: ">100"
+    }
+  }
 }
