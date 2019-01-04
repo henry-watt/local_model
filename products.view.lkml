@@ -76,7 +76,8 @@ view: products {
 
   measure: average_example {
     type: average
-    sql: ${retail_price};;
+    sql: ${retail_price}
+    drill_fields: [${retail_price}];;
   }
 
   measure: sum_eg {
@@ -91,6 +92,7 @@ view: products {
 
   measure: median_retail {
     type: median
-    sql:${retail_price} ;;
+    sql: ${retail_price}
+    value_format_name: usd;;
   }
 }
