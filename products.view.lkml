@@ -76,9 +76,9 @@ view: products {
 
   measure: average_example {
     type: average
-    sql: ${retail_price}
-    drill_fields: ${retail_price};;
-  }
+    sql: ${retail_price};;
+    drill_fields: [retail_price]
+   }
 
   measure: sum_eg {
     type: sum
