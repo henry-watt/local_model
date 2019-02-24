@@ -24,6 +24,7 @@ view: products {
 
   dimension: item_name {
     type: string
+    html: <code>{{value}}</code> ;;
     sql: ${TABLE}.item_name ;;
   }
 
@@ -93,8 +94,8 @@ view: products {
 
   measure: median_retail {
     type: median
-    sql: ${retail_price}
-    value_format_name: usd;;
+    sql: ${retail_price};;
+    value_format_name: usd
   }
 
   measure: avg_expensive_price {

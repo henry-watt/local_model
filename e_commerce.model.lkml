@@ -73,6 +73,13 @@ explore: user_data {
   }
 }
 
-explore: users {}
+explore: users {
+  always_filter: {
+    filters: {
+      field: age
+        value: ">18"
+    }
+  }
+}
 
 explore: users_nn {}
